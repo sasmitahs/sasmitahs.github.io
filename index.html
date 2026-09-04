@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sasmita Harini S</title>
+  <meta name="description" content="Sasmita Harini S — Research Fellow at Microsoft Research India (PROSE). Differential privacy, privacy-preserving machine learning, and statistical learning.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = savedTheme || systemTheme;
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <span aria-hidden="true"></span>
+  </button>
+
+  <header>
+    <h1>Sasmita Harini S</h1>
+  </header>
+
+  <main>
+    <section id="about">
+      <img src="headshot.jpg" alt="Sasmita Harini S" class="headshot">
+
+      <p>
+        Hi! I am a Research Fellow at <a href="https://www.microsoft.com/en-us/research/group/prose/">Microsoft
+          India</a>, working with the PROSE team under the guidance of Dr. Vu Le. I graduated with a B.Tech in
+        Mathematics and Computing from the <a href="https://iisc.ac.in/">Indian Institute of Science (IISc),
+          Bengaluru</a>.
+      </p>
+
+      <p>
+        My research interests are broadly differential privacy and privacy-preserving machine learning. My current
+        projects focus on differentially private regression and optimization, private fine-tuning of large language
+        models, and federated learning.
+      </p>
+
+      <p>
+        Please feel free to take a look at my <a href="cv.pdf">CV</a>.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:sasmitaharini@gmail.com">sasmitaharini at gmail dot com</a></li>
+        <li><a href="https://www.linkedin.com/in/sasmita-harini">LinkedIn</a></li>
+        <li><a href="https://github.com/sasmitahs">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications and Manuscripts</h2>
+
+      <article class="entry">
+        <h3>PROBES: A Bernstein Simplex Approach to Differentially Private OLS Estimation</h3>
+        <p class="venue">Under review at Privacy Enhancing Technologies Symposium (PETS 2027)</p>
+      </article>
+
+      <article class="entry">
+        <h3>One Release for All: Private Simple Linear Regression</h3>
+        <p class="venue">Under review at InfPriv (NeurIPS Workshop 2026)</p>
+      </article>
+
+      <article class="entry">
+        <h3>Refined Differentially Private Simple Linear Regression via Extension of a Free Lunch Result</h3>
+        <p class="venue">SeQureDB Workshop, ACM SIGMOD 2026; Theory and Practice of Differential Privacy (TPDP) 2026
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>DualEncDecoder: Federated Short-Term Load Forecasting under Heterogeneous Data</h3>
+        <p class="venue">FLCA Workshop, AAAI 2026</p>
+      </article>
+
+      <article class="entry">
+        <h3>Refuting LLM-generated Code with Reactive Task Comprehension</h3>
+        <p class="venue">ACM ITiCSE 2025</p>
+      </article>
+
+      <article class="entry">
+        <h3>Generating Refute Questions for Concrete, Cluttered Specifications</h3>
+        <p class="venue">ACM ICER 2024</p>
+      </article>
+    </section>
+
+    <section id="research">
+      <h2>Research Experience</h2>
+
+      <article class="entry">
+        <h3>Differentially Private Optimization <span class="date">Ongoing</span></h3>
+        <p class="venue">Advised by Prof. Lalitha Sankar and Prof. Oliver Kosut, Arizona State University</p>
+        <ul>
+          <li>Designed and implemented a differentially private optimizer combining coordinate-wise adaptive clipping
+            (AdaClip) with Adam, featuring an exact time-varying noise-corrected variance tracker and merged EMA
+            recursion for efficient per-sample gradient variance estimation.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Privacy-Preserving Language Model Fine-tuning <span class="date">2025</span></h3>
+        <p class="venue">Advised by Prof. Sayak Ray, IIT Kanpur</p>
+        <ul>
+          <li>Evaluated PDP-SGD versus standard DP-SGD for private fine-tuning of Qwen2.5-0.5B on MMLU-Pro and
+            RewardBench-2 using LoRA, studying noise levels and public-dataset size.</li>
+          <li>Investigated whether an English public dataset can support private training on multilingual data through
+            cross-lingual transfer.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Evaluation of Sarvam-AI <span class="date">2025</span></h3>
+        <p class="venue">Advised by Prof. Rahul De, IIM Bangalore</p>
+        <ul>
+          <li>Conducted prompt-level jailbreaking experiments to evaluate robustness and safety under adversarial and
+            sensitive prompts.</li>
+          <li>Benchmarked medical-diagnosis performance on HealthBench against DeepSeek, Gemma, LLaMA, and Qwen models.
+          </li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Interactive Audio Chatbot for Mental Health Assessment <span class="date">2024</span></h3>
+        <p class="venue">Advised by Prof. Deepak Subramanian, IISc</p>
+        <ul>
+          <li>Built a web application simulating psychologist&ndash;patient interactions using ASR-Whisper,
+            SER-Wav2Vec 2.0, and LangChain.</li>
+          <li>Fine-tuned LLaMA 3.2 with LoRA and federated learning; used XGBoost for stress-level prediction and RAG
+            for report generation.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="industry">
+      <h2>Industry Experience</h2>
+
+      <article class="entry">
+        <h3>Data Science Intern, Flipkart <span class="date">Jan 2026 &ndash; July 2026</span></h3>
+        <ul>
+          <li>Personalized Flipkart's AutoSuggest L2 Ranker by integrating 12 gender and premiumness signals into
+            XGBoost ranking models for AS CTR and Search CTR.</li>
+          <li>Designed and built the customer support chatbot for the new food delivery app, enabling follow-up options
+            and two-way chat.</li>
+          <li>Improved the SOP Writer tool and made it available across domains to simplify SOP authoring.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Privacy Research Intern, PrivaSapien <span class="date">Summer 2025</span></h3>
+        <ul>
+          <li>Implemented and evaluated differential privacy algorithms for text and enhanced CusText with POS tagging
+            to improve textual DP performance.</li>
+          <li>Integrated Tumult Analytics through microservices and automated SQL-to-JSON conversion for
+            privacy-preserving data pipelines.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Research Intern, IISc &times; TCS Research <span class="date">Summer 2024</span></h3>
+        <ul>
+          <li>Studied verification-tool prediction using prompt engineering with ChatGPT-4 to predict the suitability of
+            CBMC for validating programs against specified properties.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="awards">
+      <h2>Awards and Scholarships</h2>
+      <ul>
+        <li>1st Place, AMD AI Sprint Hackathon, Bengaluru.</li>
+        <li>AIR 425, JEE Advanced; AIR 993, JEE Main; 69th, Karnataka CET.</li>
+        <li>NTSE Scholar, NCERT.</li>
+        <li>Kotak Scholar, awarded as the highest JEE Advanced ranking female student in the Mathematics and Computing
+          program at IISc.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <p><strong>Programming:</strong> Python, SQL, LaTeX, Bash</p>
+      <p><strong>ML/AI:</strong> PyTorch, Scikit-learn, XGBoost, NLP, LLMs, RAG, LoRA, Deep Learning, GenAI, Prompt
+        Engineering</p>
+    </section>
+
+    <p class="closing">Thanks for visiting!</p>
+  </main>
+
+  <script>
+    const themeToggle = document.querySelector(".theme-toggle");
+
+    function updateThemeToggle() {
+      const isDark = document.documentElement.dataset.theme === "dark";
+      const label = `Switch to ${isDark ? "light" : "dark"} mode`;
+      themeToggle.setAttribute("aria-label", label);
+      themeToggle.title = label;
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      localStorage.setItem("theme", nextTheme);
+      updateThemeToggle();
+    });
+
+    updateThemeToggle();
+  </script>
+</body>
+
+</html>
