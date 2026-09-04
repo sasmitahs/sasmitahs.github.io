@@ -197,6 +197,13 @@ a:hover {
   line-height: 1.5;
 }
 
+.contribution-note {
+  margin: 0 0 0.15rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 #publications .venue {
   color: var(--text);
   font-size: 1rem;
