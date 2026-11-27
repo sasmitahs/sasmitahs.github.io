@@ -184,6 +184,39 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.publication-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.publication-filter button {
+  padding: 0.35rem 0.9rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.publication-filter button:hover {
+  border-color: var(--muted);
+}
+
+.publication-filter button[aria-pressed="true"] {
+  color: var(--background);
+  background: var(--link);
+  border-color: var(--link);
+}
+
+.publication-filter button:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 2px;
+}
+
 #publications h3 {
   margin-bottom: 0.3rem;
   font-size: 1.25rem;

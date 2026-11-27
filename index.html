@@ -78,7 +78,13 @@
     <section id="publications">
       <h2>Publications and Manuscripts</h2>
 
-      <article class="entry">
+      <div class="publication-filter" role="group" aria-label="Filter publications">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="conference" aria-pressed="false">Main Conferences</button>
+        <button type="button" data-filter="workshop" aria-pressed="false">Workshops</button>
+      </div>
+
+      <article class="entry" data-type="conference">
         <h3>PROBES: A Bernstein Simplex Approach to Differentially Private OLS Estimation
                   <span class="publication-year">(2027)</span>
         </h3>
@@ -88,7 +94,7 @@
         </p>
       </article>
 
-      <article class="entry">
+      <article class="entry" data-type="workshop">
         <h3>One Release for All: Private Simple Linear Regression Via Improved Simplex Mapping
           <span class="publication-year">(2026)</span>
         </h3>
@@ -98,7 +104,7 @@
         </p>
       </article>
 
-      <article class="entry">
+      <article class="entry" data-type="workshop">
         <h3>Refined Differentially Private Simple Linear Regression via Extension of a Free Lunch Result
           <span class="publication-year">(2026)</span>
         </h3>
@@ -109,7 +115,7 @@
         </p>
       </article>
 
-      <article class="entry">
+      <article class="entry" data-type="workshop">
         <h3>DualEncDecoder: Federated Short-Term Load Forecasting under Heterogeneous Data
           <span class="publication-year">(2026)</span>
         </h3>
@@ -120,7 +126,7 @@
         </p>
       </article>
 
-      <article class="entry">
+      <article class="entry" data-type="conference">
         <h3>Refuting LLM-generated Code with Reactive Task Comprehension
           <span class="publication-year">(2025)</span>
         </h3>
@@ -132,7 +138,7 @@
         </p>
       </article>
 
-      <article class="entry">
+      <article class="entry" data-type="conference">
         <h3>Generating Refute Questions for Concrete, Cluttered Specifications
           <span class="publication-year">(2024)</span>
         </h3>
@@ -169,6 +175,25 @@
     });
 
     updateThemeToggle();
+
+    const filterButtons = document.querySelectorAll(".publication-filter button");
+    const publications = document.querySelectorAll("#publications .entry");
+    const contributionNote = document.querySelector(".contribution-note");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+
+        let showNote = false;
+        publications.forEach((entry) => {
+          const visible = filter === "all" || entry.dataset.type === filter;
+          entry.hidden = !visible;
+          if (visible && entry.querySelector("sup")) showNote = true;
+        });
+        contributionNote.hidden = !showNote;
+      });
+    });
   </script>
 </body>
 
